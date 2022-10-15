@@ -9,7 +9,7 @@ import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import DeezyLogo from './assets/images/Deezy.svg';
-
+import { SocialIcon } from 'react-social-icons';
 
 const DISCORD_URL = "https://discord.gg/nEBbrUAvPy"
 const NODE_AMBOSS_URL = "https://amboss.space/node/024bfaf0cabe7f874fd33ebf7c6f4e5385971fc504ef3f492432e9e3ec77e1b5cf"
@@ -27,6 +27,13 @@ const cardTitleStyle = {
   letterSpacing: '10px',
 }
 
+const socialIconStyle ={
+  backgroundColor: 'white',
+  borderRadius: '50%',
+  boxShadow: `0 0 5px darkorange`,
+  width:'80px',
+  height:'80px',
+}
 const App = () => {
   function CommunitySection() {
     return (
@@ -42,8 +49,17 @@ const App = () => {
           fontWeight: 'bold',
           fontFamily: 'Comic Sans MS',
         }}>join our <span style={{ textShadow: '0px 0px 5px gold'}}>community</span></h2>
+        <Container className="d-flex flex-row text-center align-items-center my-5" style={{
+          maxWidth:'800px',
+          justifyContent: `space-around`
+        }}>
+          <SocialIcon url={DISCORD_URL} style={socialIconStyle} />
+          <SocialIcon url={TELEGRAM_URL} style={socialIconStyle} />
+          <SocialIcon url={"https://github.com/dannydeezy"} style={socialIconStyle} />
+          <SocialIcon url={TWITTER_URL} style={socialIconStyle} />
+        </Container>
         <Container className="mt-3">
-          <div style={{ fontFamily: 'Comic Sans MS' }}>we love to learn from each other, share ideas, build great software, and have fun</div>
+          <div style={{ fontFamily: 'Comic Sans MS' }}>we share ideas, learn, build great software, and have fun</div>
         </Container>
       </Container>
     )

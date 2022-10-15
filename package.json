@@ -13,6 +13,7 @@
     "react-icons": "^4.4.0",
     "react-loading-icons": "^1.1.0",
     "react-scripts": "^5.0.1",
+    "react-social-icons": "^5.15.0",
     "react-useinterval": "^1.0.2"
   },
   "scripts": {
