@@ -1,0 +1,183 @@
+:root {
+  --lightblue: rgb(230, 242, 247);
+  --lightbluegray: rgb(239, 245, 247);
+  --orange: rgba(240, 159, 18, 1);
+}
+
+html,
+body,
+#root,
+.vh100 {
+  overflow-y: scroll;
+}
+
+@font-face {
+  font-family: 'InterBold';
+  src: local('InterBold'), url(./assets/fonts/Inter/static/Inter-Bold.ttf) format('truetype');
+}
+
+html {
+  background-color: black;
+  border: 5px solid black;
+}
+
+.gold-gradient {
+  background: linear-gradient(to right, gold 0%, #ff8a00 50%, #dd4c4f 100%);
+  /* Mask the color to the text, and remove the rest  */
+  -webkit-background-clip: text;
+  /* Make the text fill color value transparent so the masked background color comes through */
+  -webkit-text-fill-color: transparent;
+}
+.info-phrase {
+
+}
+.emoji-group {
+  font-size:30px;
+}
+h1 {
+  font-size: 48pt !important;
+  font-family: "InterBold";
+}
+
+#main-title {
+  padding-top: 180px;
+  padding-bottom: 220px;
+  background-color: rgb(35, 34, 34);
+  color: white;
+}
+
+.info-card {
+  width: 30rem;
+  box-shadow: #ff8a00 0px 0px 10px;
+  color: black;
+}
+
+.main-button {
+  width: 150px;
+}
+
+.small-text {
+  font-size:6pt;
+  max-width:50%;
+  margin: auto;
+}
+
+.shadowed-gold {
+  box-shadow: gold 0px 0px 12px;
+}
+
+.shadowed-orange{
+  box-shadow: #ff8a00 0px 0px 12px;
+}
+
+.title-color {
+  color: black;
+  font-weight: normal;
+}
+
+.thick-shadow {
+  text-shadow: 1px 1px 4px black;
+}
+
+.small-text {
+  font-size: 10pt;
+}
+
+.swap-option {
+  max-width: 300px;
+  margin-top: 10px;
+  margin: auto;
+}
+
+.small-text {
+  font-size: 10pt;
+}
+
+#node-section,
+#contact-section,
+#swap-section {
+  max-width: 800px;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  color: black;
+}
+
+#chainval {
+  text-align: left;
+}
+
+#check-image {
+  max-width: 100px;
+}
+
+.node-text {
+  width: 75%;
+  margin: auto;
+}
+
+.centered {
+  margin: auto;
+}
+
+.center-contents {
+  text-align: center;
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+
+.modal-body {
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 38pt !important;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  h1 {
+    font-size: 22pt !important;
+  }
+
+  .subtitle {
+    font-size: 10pt !important;
+  }
+
+  .in-text {
+    font-size: 10pt !important;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  h1 {
+    font-size: 20pt !important;
+  }
+
+  .subtitle {
+    font-size: 9pt !important;
+  }
+
+  .in-text,
+  .small-text {
+    font-size: 8pt !important;
+  }
+}
+
+@media screen and (max-width: 315px) {
+  h1 {
+    font-size: 15pt !important;
+  }
+
+  .subtitle {
+    font-size: 9pt !important;
+  }
+
+  .in-text,
+  .small-text {
+    font-size: 6pt !important;
+  }
+}
