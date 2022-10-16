@@ -8516,6 +8516,11 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
+"react-slide-fade-in@^1.0.7":
+  "integrity" "sha512-Wh0n8P3ho3VTbjMBDfn8yZmc7v34RS1LCp4sB2tLBs8+v2QPypQ9OZQdvDAG0D8VqBVcHfnSQ5+mriW7pTCg6g=="
+  "resolved" "https://registry.npmjs.org/react-slide-fade-in/-/react-slide-fade-in-1.0.7.tgz"
+  "version" "1.0.7"
+
 "react-social-icons@^5.15.0":
   "integrity" "sha512-khfDgUiUwEBe34T6br2+mkXQg3hLVDdviVjexxZoVCsogMgxTy/m8+KlX/j6Wa7P2BPxgZ7yZ2jXw3X06pUUFQ=="
   "resolved" "https://registry.npmjs.org/react-social-icons/-/react-social-icons-5.15.0.tgz"
