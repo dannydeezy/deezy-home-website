@@ -10,7 +10,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import DeezyLogo from './assets/images/Deezy.svg';
 import { SocialIcon } from 'react-social-icons';
+var ReactRotatingText = require('react-rotating-text');
 
+<ReactRotatingText items={['first', 'second', 'third']} />
 const DISCORD_URL = "https://discord.gg/nEBbrUAvPy"
 const NODE_AMBOSS_URL = "https://amboss.space/node/024bfaf0cabe7f874fd33ebf7c6f4e5385971fc504ef3f492432e9e3ec77e1b5cf"
 const TWITTER_URL = "https://twitter.com/dannydiekroeger"
@@ -23,8 +25,7 @@ const cardTitleStyle = {
   fontSize: '70px',
   fontWeight: 'bold',
   textShadow: `0 0 3px darkorange`,
-  fontFamily: 'Comic Sans MS',
-  letterSpacing: '10px',
+  fontFamily: 'Menlo',
 }
 
 const socialIconStyle ={
@@ -35,6 +36,9 @@ const socialIconStyle ={
   height:'80px',
 }
 const App = () => {
+  const exploreRef = useRef(null);
+  const scrollToRef = (ref) => ref.current.scrollIntoView();
+
   function CommunitySection() {
     return (
       <Container style={{
@@ -47,19 +51,18 @@ const App = () => {
         <h2 style={{
           fontSize: '50px',
           fontWeight: 'bold',
-          fontFamily: 'Comic Sans MS',
-        }}>join our <span style={{ textShadow: '0px 0px 5px gold'}}>community</span></h2>
+        }}><span style={{ textShadow: '0px 0px 5px gold' }}>join our community</span></h2>
         <Container className="d-flex flex-row text-center align-items-center my-5" style={{
           maxWidth:'800px',
           justifyContent: `space-around`
         }}>
-          <SocialIcon url={DISCORD_URL} style={socialIconStyle} />
-          <SocialIcon url={TELEGRAM_URL} style={socialIconStyle} />
-          <SocialIcon url={"https://github.com/dannydeezy"} style={socialIconStyle} />
-          <SocialIcon url={TWITTER_URL} style={socialIconStyle} />
+          <SocialIcon url={DISCORD_URL} target="_blank" style={socialIconStyle} />
+          <SocialIcon url={TELEGRAM_URL} target="_blank" style={socialIconStyle} />
+          <SocialIcon url={"https://github.com/dannydeezy"} target="_blank" style={socialIconStyle} />
+          <SocialIcon url={TWITTER_URL} target="_blank" style={socialIconStyle} />
         </Container>
         <Container className="mt-3">
-          <div style={{ fontFamily: 'Comic Sans MS' }}>we share ideas, learn, build great software, and have fun</div>
+          <div style={{ fontFamily: 'Comic Sans MS' }}>we share ideas, earn money, learn, build software, and have fun</div>
         </Container>
       </Container>
     )
@@ -86,13 +89,13 @@ const App = () => {
         backgroundColor: `rgb(35, 34, 34)`,
         color: `white`
       }} fluid bg="dark" variant="dark" className="d-flex flex-column text-center align-items-center justify-content-center">
-        <h1>Home for <span className="gold-gradient">Lightning Liquidity </span></h1>
+        <h1>Home for <span className="gold-gradient">Lightning Liquidity</span></h1>
         <Container className="mt-5">
-          <Button variant="secondary" className="mx-5 px-4 main-button shadowed-orange">Explore</Button>
+          <Button variant="secondary" className="mx-5 px-4 main-button shadowed-orange" onClick={() => scrollToRef(exploreRef)}>Explore</Button>
           <Button variant="secondary" className="mx-5 px-4 main-button" onClick={() => window.open('https://docs.deezy.io')}>Api Docs</Button>
         </Container>
       </Container>
-      <Container style={{
+      <Container ref={exploreRef} style={{
         borderTop: '1px solid grey',
         paddingTop: `100px`,
         paddingBottom: `220px`,
