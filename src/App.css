@@ -47,13 +47,15 @@ h1 {
 }
 
 .info-card {
-  width: 30rem;
+  max-width: 500px;
+  min-width: 300px;
   box-shadow: #ff8a00 0px 0px 10px;
   color: black;
 }
 
 .main-button {
   width: 150px;
+  margin: 30px;
 }
 
 .small-text {
@@ -140,7 +142,7 @@ h1 {
 
 @media screen and (max-width: 545px) {
   h1 {
-    font-size: 22pt !important;
+    font-size: 24pt !important;
   }
 
   .subtitle {
