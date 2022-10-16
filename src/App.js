@@ -43,15 +43,18 @@ const App = () => {
     return (
       <Container style={{
         borderTop: '1px solid grey',
-        paddingTop: `40px`,
+        paddingTop: `10px`,
         paddingBottom: `220px`,
         backgroundColor: `rgb(35, 34, 34)`,
         color: `white`
       }} fluid bg="dark" variant="dark" className="d-flex flex-column text-center align-items-center justify-content-center">
-        <h2 style={{
+        <h2 className="py-5" style={{
           fontSize: '50px',
           fontWeight: 'bold',
         }}><span style={{ textShadow: '0px 0px 5px gold' }}>join our community</span></h2>
+        <Container className="my-1">
+          <div style={{ fontFamily: 'Comic Sans MS' }}>we share ideas, earn, learn, build software, and have fun</div>
+        </Container>
         <Container className="d-flex flex-row text-center align-items-center my-5" style={{
           maxWidth:'800px',
           justifyContent: `space-around`
@@ -61,8 +64,8 @@ const App = () => {
           <SocialIcon url={"https://github.com/dannydeezy"} target="_blank" style={socialIconStyle} />
           <SocialIcon url={TWITTER_URL} target="_blank" style={socialIconStyle} />
         </Container>
-        <Container className="mt-3">
-          <div style={{ fontFamily: 'Comic Sans MS' }}>we share ideas, earn money, learn, build software, and have fun</div>
+        <Container className="my-1">
+          <div>also check out <a style={{ color: 'white' }} href="https://twitter.com/taowallet" target="_blank">tao wallet</a></div>
         </Container>
       </Container>
     )
