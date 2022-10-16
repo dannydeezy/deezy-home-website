@@ -1,7 +1,8 @@
 :root {
   --lightblue: rgb(230, 242, 247);
   --lightbluegray: rgb(239, 245, 247);
-  --orange: rgba(240, 159, 18, 1);
+  --orange: #ff8a00;
+  --blackish: rgb(35, 34, 34);
 }
 
 html,
@@ -22,7 +23,7 @@ html {
 }
 
 .gold-gradient {
-  background: linear-gradient(to right, gold 0%, #ff8a00 50%, #dd4c4f 100%);
+  background: linear-gradient(to right, gold 0%, var(--orange) 50%, #dd4c4f 100%);
   /* Mask the color to the text, and remove the rest  */
   -webkit-background-clip: text;
   /* Make the text fill color value transparent so the masked background color comes through */
@@ -46,7 +47,7 @@ h1 {
 #main-title {
   padding-top: 180px;
   padding-bottom: 220px;
-  background-color: rgb(35, 34, 34);
+  background-color: var(--blackish);
   color: white;
 }
 
@@ -54,14 +55,14 @@ h1 {
   border-top: 1px solid grey;
   padding-top: 180px;
   padding-bottom: 220px;
-  background-color: rgb(35, 34, 34);
+  background-color: var(--blackish);
   color: white;
 }
 
 .info-card {
   max-width: 500px;
   min-width: 300px;
-  box-shadow: #ff8a00 0px 0px 10px;
+  box-shadow: var(--orange) 0px 0px 10px;
   color: black;
   margin-left: 20px;
   margin-right: 20px;
@@ -103,7 +104,7 @@ h1 {
 }
 
 .shadowed-orange {
-  box-shadow: #ff8a00 0px 0px 12px;
+  box-shadow: var(--orange) 0px 0px 12px;
 }
 
 .title-color {
