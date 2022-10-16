@@ -118,7 +118,7 @@ const App = () => {
             <Card.Title className="card-title-emoji">🔄</Card.Title>
             <Card.Title className="card-title">swap</Card.Title>
             <Card.Text className="info-text">
-              <span className="info-phrase">swap instantly</span> between lightning and on-chain bitcoin. even get a dedicated on-chain <a style={{ color: 'white' }} href="https://docs.deezy.io/#tag/Swap-(BTC-to-LN)" target="_blank">deposit address</a> for your lightning address
+              <span className="info-phrase">swap instantly</span> between lightning and on-chain bitcoin. even get a dedicated on-chain <a style={{ color: 'white' }} href="https://docs.deezy.io/#tag/Swap-(BTC-to-LN)" target="_blank">deposit address</a> for your lightning address.
               <br /><br />
             </Card.Text>
             <Button variant="primary" className="shadowed-orange" onClick={() => window.open('https://swap.deezy.io')}>swap now</Button>
